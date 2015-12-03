@@ -1,13 +1,13 @@
 # Welcome to CSS Fundamentals!
 
-### Instructor: Eric Greene
+### Instructor: [Eric Greene](https://www.linkedin.com/in/ericwgreene)
 
 ## Class Schedule
 
 - Thursday & Friday: 9am to 5pm
 - Breaks:
-	- Morning: 10:30am to 10:40am
-	- Lunch: 12:15pm to 1pm
+	- Morning: 10:25am to 10:35am
+	- Lunch: 12:00pm to 1pm
 	- Afternoon:
 		- 2:20pm to 2:30pm
 		- 3:40pm to 3:50pm
@@ -34,3 +34,8 @@
 - Responsive Web Design
 - CSS Frameworks
 
+## GitHub Repository
+
+Please clone the following repository to your computer:
+
+[https://github.com/training4developers/css_12032015](https://github.com/training4developers/css_12032015)
