@@ -1,0 +1,19 @@
+body {
+	font-family: arial;
+}
+
+p {
+	line-height: 150%;
+}
+
+h1, h2 {
+	color:pink;
+}
+
+.person-name {
+	font-style:italic;
+}
+
+#item-1 {
+	color:fuchsia;
+}
