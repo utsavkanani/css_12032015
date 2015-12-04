@@ -5,51 +5,93 @@
 	<title>My Friend's Profile Page</title>
 	<link href="site.css" rel="stylesheet">
 	<style>
-		#main-menu > ul > li {
+		#main-menu ul > li {
 			display: inline-block;
+		}
+
+		.container {
+			box-sizing:border-box;
+			overflow: auto;
+			width:100%;
+		}
+
+		.row {
+			box-sizing:border-box;
+		}
+
+		.row::after {
+			content: "";
+			display:table;
+			clear:both;
+		}
+
+		.col-3, .col-9, .col-12 {
+			box-sizing:border-box;
+			float:left;
+			border:2px solid blue;
+		}
+
+		.col-12 {
+			width:100%;
+		}
+
+		.col-3 {
+			width:25%;
+		}
+
+		.col-9 {
+			width:75%;
 		}
 
 	</style>
 </head>
 
 <body>
-	<header>
-		<h1><img src="kyle.png">Kyle's Profile Page</h1>
-		<nav id="main-menu">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Bio</a></li>
-				<li><a href="#">Interesting Things</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+	<div class="container">
+		<header class="row">
+			<div class="col-12">
+				<h1><img src="kyle.png">Kyle's Profile Page</h1>
+			</div>
+		</header>
+		<nav class="row" id="main-menu">
+			<div class="col-12">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Bio</a></li>
+					<li><a href="#">Interesting Things</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
 		</nav>
-	</header>
-	<main>
-		<h2>Biography</h2>
-		<p>
-			<span class="person-name" style="text-decoration:underline;">Kyle</span> is from Washington State, and lived in California before
-			moving to Boulder in 2014. He taught English in Bogota, Colombia
-			as well as Oaxaca, Mexico (he also speaks conversational Spanish).
-			<span class="person-name">Kyle</span> brings a wealth of knowledge and experience in elearning course
-			platforms, including extensive exposure to thousands of online courses
-			and teaching styles. He has BAs in Psychology and Marketing from the
-			UW Seattle.
-		</p>
+		<main>
+			<div class="col-9">
+				<h2>Biography</h2>
+				<p>
+					<span class="person-name" style="text-decoration:underline;">Kyle</span> is from Washington State, and lived in California before
+					moving to Boulder in 2014. He taught English in Bogota, Colombia
+					as well as Oaxaca, Mexico (he also speaks conversational Spanish).
+					<span class="person-name">Kyle</span> brings a wealth of knowledge and experience in elearning course
+					platforms, including extensive exposure to thousands of online courses
+					and teaching styles. He has BAs in Psychology and Marketing from the
+					UW Seattle.
+				</p>
 
-		<h2>Three Interesting Things!</h2>
-		<ul>
-			<li id="item-1">He loves to meet new people!</li>
-			<li id="item-2">He speaks 1.8 languages.</li>
-			<li id="item-3">On moon lit nights, he loves long walks on the beach.</li>
-		</ul>
-		<aside>
-			Content to go here...
-		</aside>
-	</main>
-	<footer>
-		<nav></nav>
-		&copy; 2015 Kyle Rocks, Inc.
-	</footer>
-
+				<h2>Three Interesting Things!</h2>
+				<ul>
+					<li id="item-1">He loves to meet new people!</li>
+					<li id="item-2">He speaks 1.8 languages.</li>
+					<li id="item-3">On moon lit nights, he loves long walks on the beach.</li>
+				</ul>
+			</div>
+			<aside class="col-3">
+				Content to go here...
+			</aside>
+		</main>
+		<footer class="row">
+			<div class="col-12">
+				&copy; 2015 Kyle Rocks, Inc.
+			</div>
+		</footer>
+	</div>
 </body>
 </html>
