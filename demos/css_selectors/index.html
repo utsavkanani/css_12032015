@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>My Friend's Profile Page</title>
+	<style>
+
+		input:valid {
+			border: 2px solid green;
+		}
+
+		input:invalid {
+			border: 2px solid red;
+		}
+
+		.required-notification {
+			color:red;
+			display:none;
+		}
+
+		input:invalid + .required-notification {
+			display: inherit;
+		}
+
+
+		input:focus {
+			outline: none;
+			border: 2px solid fuchsia;
+		}
+
+		/*li:nth-child(3n+2) {
+			font-weight:bold;
+		}*/
+
+		/*div:last-of-type {
+			font-weight:bold;
+		}*/
+
+		div + span {
+			font-weight:bold;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<h1 data-custom="some custom value">Kyle's Profile Page</h1>
+
+	<img src="kyle.png">
+
+	<h2>Biography</h2>
+	<p>
+		<span class="person-name">Kyle</span> is from Washington State, and lived in California before
+		moving to Boulder in 2014. He taught English in Bogota, Colombia
+		as well as Oaxaca, Mexico (he also speaks conversational Spanish).
+		<span class="person-name">Kyle</span> brings a wealth of knowledge and experience in elearning course
+		platforms, including extensive exposure to thousands of online courses
+		and teaching styles. He has BAs in Psychology and Marketing from the
+		UW Seattle.
+	</p>
+
+	<section>
+		<span>A</span>
+		<span>B</span>
+		<div>C
+			<span>C.A</span>
+			<span>C.B</span>
+		</div>
+		<span>D</span>
+	</section>
+
+	<h2>Three Interesting Things!</h2>
+	<ul>
+		<li id="item-1">He loves to meet new people!</li>
+		<li id="item-2">He speaks 1.8 languages.</li>
+		<li id="item-3">On moon lit nights, he loves long walks on the beach.</li>
+		<li id="item-4">He loves to meet new people!</li>
+		<li id="item-5">He speaks 1.8 languages.</li>
+		<li id="item-6">On moon lit nights, he loves long walks on the beach.</li>
+		<li id="item-7">He loves to meet new people!</li>
+		<li id="item-8">He speaks 1.8 languages.</li>
+		<li id="item-9">On moon lit nights, he loves long walks on the beach.</li>
+	</ul>
+
+	<h2>Contact Form</h2>
+	<form>
+		<div>
+			<label>First Name
+				<input type="text" name="first-name" required>
+				<div class='required-notification'>First Name is Required!</div>
+			</label>
+		</div>
+		<div>
+			<label>Last Name
+				<input type="text" name="last-name" required>
+			</label>
+		</div>
+		<div>
+			<label>Age
+				<input type="number" name="age">
+			</label>
+		</div>
+		<div>
+			<label>Email
+				<input type="email" name="email-address" required>
+			</label>
+		</div>
+		<button type="button" data-action-save>Save</button>
+		<button type="button" data-action-cancel>Cancel</button>
+	</form>
+
+	<script>
+
+		var buttons = document.querySelectorAll("[data-action-save], [data-action-cancel]");
+		console.dir(buttons);
+	</script>
+
+</body>
+</html>
