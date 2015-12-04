@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Layout Demo</title>
+		<style>
+
+			.container {
+				margin:100px;
+				border: 2px red dashed;
+				padding:5px;
+				overflow:auto;
+			}
+
+			.content-item {
+				border: 2px solid blue;
+				padding:5px;
+				height:60px;
+			}
+
+			.content-item:nth-child(2n) {
+				height:120px;
+			}
+
+			.content-item.flt {
+				float:left;
+			}
+
+			.content-item.flt-r {
+				float:right;
+			}
+
+			p {
+				clear:both;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="content-item flt">Content 1</div>
+			<div class="content-item flt-r">Content 2</div>
+			<!-- <div class="content-item flt">Content 3</div>
+			<div class="content-item flt-r">Content 4</div> -->
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec nisi commodo, venenatis mauris et, porttitor elit. Mauris eu bibendum libero, sed viverra mauris. Sed sit amet dignissim sem, in eleifend neque. Quisque et dui in velit gravida auctor et quis nulla. Cras id mauris accumsan, aliquam nulla ut, pharetra justo. Sed dapibus nec quam in blandit. Nullam augue sapien, eleifend eget sem eu, mollis tincidunt augue. Donec at ligula bibendum, finibus risus vitae, malesuada neque. Nam tristique ornare magna, nec fermentum justo pharetra ac. Morbi ut sapien tempor, sollicitudin nisl ornare, aliquam massa.</p>
+		</div>
+
+
+	</body>
+
+</html>

@@ -6,13 +6,18 @@
 		<title>Layout Demo</title>
 		<style>
 
-			.content-item {
-				margin:100px;
-				border: 3px red dashed;
-				padding:50px;
-				color: blue;
-				font-family:arial;
+			p::before {
+				content: "Before Content";
+			}
+
+			p::after {
+				content: "After Content";
+				color:red;
 				display:block;
+			}
+
+			p {
+				color:blue;
 			}
 
 		</style>
@@ -20,11 +25,7 @@
 
 	<body>
 
-		<div class="content-item">Content 1</div>
-		<div class="content-item">Content 2</div>
-		<div class="content-item">Content 3</div>
-
-
+		<p>Some Content...</p>
 
 	</body>
 
