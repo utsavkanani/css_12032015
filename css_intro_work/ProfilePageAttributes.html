@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Friend's Profile Page</title>
+<!--style rule-->
+<style>
+body {
+  font-family: arial;
+}
+
+p {
+  line-height: 150%;
+}
+
+h2 {
+  color:Pink;
+}
+
+h1, h2 {
+  color: #FF1493;
+}
+
+.person-name {
+  font-weight: 800;
+  font-style: italic;
+}
+
+#item-1 {
+  color:fuchsia;
+}
+
+[data-custom] {
+  color:green;
+}
+
+[data-action-save],  [data-action-cancel]{
+  font-weight: bold;
+  color:white;
+}
+
+[data-action-save] {
+  background-color: blue;
+}
+
+[data-action-cancel] {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+
+<h1 data-custom="some custom attribute">Miguel's Profile Page</h1>
+
+<img src="/Users/ukanani/Documents/PersonalDev/cssClass/css_12032015/MiguelCat.jpeg"></img>
+
+<h2>Biography</h2>
+<p> <span class="person-name">Miguel</span> awesome Developer at Salesforce</p>
+
+<h2>Three Interesting Things...</h2>
+<ul>
+    <li id="item-1">Has two cats and hates them :)</li>
+    <li id="item-2">Has saved the world on numerous occassions</li>
+    <li id="item-3">Hates ManU as much as he hates Real Madrid</li>
+</ul>
+
+<form>
+  <button type="button" data-action-save>Save</button>
+  <button type="button" data-action-cancel>Cancel</button>
+</form>
+
+</body>
+</html>
