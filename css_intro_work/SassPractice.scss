@@ -1,0 +1,78 @@
+$red-color: red;
+  $blue-color: blue;
+  $white-color: white;
+  $solid-border: 1px solid;
+
+@mixin all-classes-style() {
+      color: $white-color;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    line-height: 99em;
+    padding: 0 2em;
+  }
+
+  .alert {
+    border: 1px solid;
+    padding: 1em;
+  }
+
+  .color-1 {
+    color: $red-color;
+}
+
+.color-2 {
+    color: $blue-color;
+}
+
+.color-3 {
+    color: #FF69B4;
+}
+
+.color-4 {
+    color: #0d0d0d;
+}
+
+.other-style-1 {
+  @extend .alert;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: $red-color;
+}
+
+.other-style-2 {
+  @extend .alert;
+    background-color: rgba(0, 0, 255, 0.2);
+    color: $blue-color;
+}
+
+  .class-1 {
+
+    background-color: #FF69B4;
+    background-image: linear-gradient(#ffcfe7, #ff369b);
+    border: $solid-border #ff369b;
+    border-radius: 3px;
+    @include all-classes-style;
+}
+
+.class-2 {
+    background-color: blue;
+    background-image: linear-gradient(#6666ff, #0000cc);
+    border: $solid-border #0000cc;
+    border-radius: 3px;
+    @include all-classes-style;
+}
+
+.class-3 {
+    background-color: #FF69B4;
+    background-image: linear-gradient(#ffcfe7, #ff369b);
+    border: $solid-border #ff369b;
+    border-radius: 10px;
+    @include all-classes-style;
+}
+
+.class-4 {
+    background-color: #FF69B4;
+    background-image: linear-gradient(#ffcfe7, #ff369b);
+    border: $solid-border #ff369b;
+    border-radius: 3px;
+    padding: 0 1em;
+    @include all-classes-style;
+}

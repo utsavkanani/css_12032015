@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Friend's Profile Page</title>
+<!--style rule-->
+<style>
+body {
+  font-family: arial;
+}
+
+p {
+  line-height: 150%;
+}
+
+h2 {
+  color:Pink;
+}
+
+h1, h2 {
+  color: #FF1493;
+}
+
+#main-menu > ul > li {
+  display:inline-block;
+}
+
+.person-name {
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+
+#item-1 {
+  color:fuchsia;
+}
+
+[data-custom] {
+  color:green;
+}
+
+[data-action-button]{
+  font-weight: bold;
+  color:white;
+}
+
+[data-action-button='save'] {
+  background-color: blue;
+}
+
+[data-action-button='cancel'] {
+  background-color: green;
+}
+
+.required-notification {
+  display:none;
+  color:red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid +{
+  border: 2px solid red;
+}
+
+input:invalid + .required-notification {
+  display: inherit;
+}
+
+input:focus{
+  outline: none;
+  border: 2px solid fuchsia;
+}
+
+.container {
+  box-sizing: border-box;
+  overflow: auto;
+  width:960px;
+}
+
+.container-fluid {
+  box-sizing: border-box;
+  overflow: auto;
+  width:100%;
+}
+
+.row {
+  box-sizing: border-box;
+
+}
+
+.row::after {
+  content:'';
+  display:table;
+  clear:both;
+}
+
+.col-1 {
+  width:8.33333333333%;
+  box-sizing: border-box;
+  padding:5px;
+  overflow: auto;
+}
+
+.col-3 {
+  width:25%;
+  float:left;
+  box-sizing: border-box;
+  padding:5px;
+  overflow: auto;
+}
+
+.col-6 {
+  width:50%;
+  float:left;
+  box-sizing: border-box;
+  padding:5px;
+  overflow: auto;
+}
+
+.col-9 {
+  width:75%;
+  float:left;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  padding:5px;
+  overflow: auto;
+}
+
+.flt-left {
+  float: left;
+}
+</style>
+</head>
+
+
+<body class='container'>
+
+<header class='row'>
+<h1 data-custom="some custom attribute">Miguel's Profile Page</h1>
+<img src="/Users/ukanani/Documents/PersonalDev/cssClass/css_12032015/MiguelCat.jpeg"></img>
+</header>
+
+<nav id="main-menu" class='row'>
+  <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Bio</a> </li>
+  <li><a href="#">Interesting Things</a></li>
+  <li><a href="#">Contact</a></li>
+  <ul>
+</nav>
+
+<main>
+<h2>Biography</h2>
+<p> <span class="person-name">Miguel</span> awesome Developer at Salesforce</p>
+
+<h2>Three Interesting Things...</h2>
+<ul>
+    <li id="item-1">Has two cats and hates them :)</li>
+    <li id="item-2">Has saved the world on numerous occassions</li>
+    <li id="item-3">Hates ManU as much as he hates Real Madrid</li>
+</ul>
+
+<form>
+    <div>
+      <label>First Name:<br>
+        <input type="text" name="firstname" required>
+        <span class='required-notification'>The First Name is required!!!!</span>
+      </label>
+    </div>
+    <div>
+      <label>Last Name:<br>
+        <input type="text" name="lastname" required>
+      </label>
+    </div>
+    <div>
+      <label>Age:<br>
+        <input type='number' name="age" value="">
+      </label>
+    </div>
+    <div>
+      <label>Email:<br>
+        <input type="email" size="35" name="email" required>
+      </label>
+    </div>
+    <div>
+      Gender:&nbsp;
+          <label>Male:&nbsp;
+          <input type="radio" name="gender" value="Male">
+          </label>
+          <label>
+          Female:&nbsp;
+          <input type="radio" name="gender" value="Female">
+          </label>
+          <label>
+          Other:&nbsp;
+          <input type="radio" name="gender" value="Other">
+          </label>
+    </div>
+    <div>
+      <button type="button" data-action-button="save">Save</button>
+      <button type="button" data-action-button="cancel">Cancel</button>
+    </div>
+</form>
+
+<aside>
+  Sidebar goes here
+<asise>
+</main>
+
+<footer class = 'row'>
+  <p>Posted by: Utsav Kanani</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+</body>
+
+
+</html>

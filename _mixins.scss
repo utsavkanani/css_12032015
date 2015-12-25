@@ -1,0 +1,14 @@
+@mixin global-shadow() {
+box-shadow: 1px 1px 3px rgba( black, 0.3);
+}
+
+@mixin base-button( $color: $color3, $text-color: white, $radius: 3px) {
+background-color: $color;
+background-image: linear-gradient( lighten( $color, 20%), darken( $color, 10%));
+border: 1px solid darken( $color, 10%);
+border-radius: $radius;
+color: $text-color;
+@include global-shadow();
+line-height: 99em;
+padding: 0 2em;
+}

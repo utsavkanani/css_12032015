@@ -1,0 +1,56 @@
+@import 'colors';
+@import 'mixins';
+
+section {
+    padding: 1em;
+}
+
+.color-1 {
+    color: $color1;
+}
+
+.color-2 {
+    color: $color2;
+}
+
+.color-3 {
+    color: $color3;
+}
+
+.color-4 {
+    color: $color4;
+}
+
+.class-1 {
+    @include base-button();
+}
+
+.class-2 {
+    @include base-button( $color2);
+}
+
+.class-3 {
+    @include base-button( $radius: 10px);
+}
+
+.class-4 {
+    @include base-button();
+    padding: 0 1em;
+}
+
+.alert {
+    border: 1px solid;
+    padding: 1em;
+}
+
+.other-style-1 {
+    @extend .alert;
+    background-color: rgba( $color1, 0.2);
+    color: $color1;
+}
+
+.other-style-2 {
+    @extend .alert;
+    background-color: rgba( $color2, 0.2);
+    color: $color2;
+}
